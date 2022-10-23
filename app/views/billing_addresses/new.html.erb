@@ -1,0 +1,18 @@
+<%= render "shared/nav" %>
+
+<div class="page-header">
+  <h1>Billing Address Submission Form</h1>
+</div>
+
+<%= bootstrap_form_with(model: @billing_address, local: true, inline_errors: true, layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-4") do |f| %>
+
+  <%= f.text_field :name, placeholder: "Alexander Hamilton" %>
+  <%= f.email_field :email_address, placeholder: "example@email.com" %>
+  <%= f.telephone_field :phone_number, placeholder: "xxxxxxxxxx" %>
+  <%= f.text_field :street_address, placeholder: "123 Main St" %>
+  <%= f.text_field :city, placeholder: "Columbus" %>
+  <%= f.select :state, State::STATE_LIST, include_blank: 'Select a state' %>
+  <%= f.text_field :zip, placeholder: "12345" %>
+
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
