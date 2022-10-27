@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    help:
+      billing_address:
+        name: "Please enter a full name"
+        email_address: "Please enter a valid email address"
+        phone_number: "Please enter a 10 digit number"
+        zip: "Please enter a 5 digit number"

@@ -11,7 +11,7 @@
   <%= f.telephone_field :phone_number, placeholder: "xxxxxxxxxx" %>
   <%= f.text_field :street_address, placeholder: "123 Main St" %>
   <%= f.text_field :city, placeholder: "Columbus" %>
-  <%= f.select :state, State::STATE_LIST, include_blank: 'Select a state' %>
+  <%= f.select :state, UsStates::ABBREVIATIONS, include_blank: 'Select a state' %>
   <%= f.text_field :zip, placeholder: "12345" %>
 
   <%= f.submit "Submit", class: "btn btn-primary" %>

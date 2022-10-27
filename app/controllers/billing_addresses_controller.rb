@@ -11,14 +11,10 @@ class BillingAddressesController < ApplicationController
     @billing_address = BillingAddress.new(billing_address_params)
     
     if @billing_address.save
-      redirect_to '/billing_addresses/success'
+      redirect_to success_path
     else
-      # render json: ErrorSerializer.serialize(@billing_address.errors.messages).to_json, status: :unprocessable_entity
       render :new, status: :unprocessable_entity
     end
-  end
-
-  def success
   end
 
   private
